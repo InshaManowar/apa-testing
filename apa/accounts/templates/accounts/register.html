@@ -1,0 +1,120 @@
+{% extends 'accounts/base.html' %}
+
+
+{% block content %}
+
+
+<style type="text/css">
+  .form-signin {
+  width: 100%;
+  max-width: 530px;
+  padding: 15px;
+  margin: auto;
+  }
+
+  .form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .form-signin .form-control:focus {
+    z-index: 2;
+  }
+  .form-signin input[type="email"] {
+    margin-bottom: 28px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .form-signin input[type="text"] {
+    margin-bottom: 28px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .form-signin input[type="password"] {
+    margin-bottom: 5px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  .form-signin label[for="id_image"] {
+    margin-top: 35px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .h3{
+    text-align: center;
+  }
+  .text-muted{
+    margin-bottom: 19px; }
+
+</style>
+<div class="container logout-wrap text-center" style="margin-top: 8%; margin-bottom: 2%;" >
+  <h1  style="color: black !important;">Sign up to become a member of Ayurvedic Proctology Association.</h1>
+<p>Know more about <a href="#">benefits of being a member</a></p>
+</div>
+
+<form class="form-signin" method="post" style="margin-top: 5%; width: 70vw;" enctype="multipart/form-data">{% csrf_token %}
+
+  <h1 class="h3 mb-3 font-weight-normal">Register an account</h1>
+  <label for="inputEmail">Email</label>
+  <input type="email" method="POST" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  <label for="inputUsername">Username</label>
+  <input type="text" name="username" id="inputUsername" class="form-control" placeholder="Username" required>
+  <label for="inputFirstName">Your first name</label>
+  <input type="text" name="first_name" id="inputFirstName" class="form-control" placeholder="First name" required>
+  <label for="inputLastName">Your last name</label>
+  <input type="text" name="last_name" id="inputLastName" class="form-control" placeholder="Last name" required>
+  <label for="inputDesignation">Your Designation</label>
+  <input type="text" name="designation" id="inputDesignation" class="form-control" placeholder="designation" required>
+  <label for="inputPhone">Mobile number preceeded with country code (e.g., +91999999999)</label>
+  <input type="text" name="phone" id="inputPhone" class="form-control" placeholder="mobile number" required>
+  <label for="inputAddress">Your clinic address</label>
+  <input type="text" name="address" id="inputAddress" class="form-control" placeholder="clinic address" required>
+  <label for="inputQualification">Your qualifications</label>
+  <input type="text" name="qualification" id="inputQualification" class="form-control" placeholder="your qualifications" required>
+  <label for="inputPassword1">Create a password</label>
+  <input type="password" name="password1" id="inputPassword1" class="form-control" placeholder="Password" required>
+  <label for="inputPassword2">Confirm your password</label>
+
+  <input type="password" name="password2" id="inputPassword2" class="form-control" placeholder="Confirm password" required>
+  <label for="id_image">Upload a profile picture.</label>
+  <input id="id_image" type="file" class="form-control" name="profile_image">
+
+ 
+  
+  {% for field in registration_form %}
+      <p>
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+      </p>
+  {% endfor %}
+  {% if registration_form.non_field_errors %}
+    <div style="color: red">
+      <p>{{registration_form.non_field_errors}}</p>
+    </div>
+      
+
+
+      
+  {% endif %}
+
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+
+</form>
+<hr>
+<div class="container logout-wrap text-center" style="margin-top: 5%; margin-bottom: 2%;" >
+  <p style="color: black !important; font-style: oblique;">
+    You can change or update the details later too. </p>
+</div>
+
+{% endblock content %}
+
+
+
+
+
+

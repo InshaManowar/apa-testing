@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>APA</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" ></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">    <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <!-- <link rel="stylesheet" href="indexnewstyle.css"> -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <link rel="stylesheet" href="testinomial_slider1.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="{% static 'home/indexnewstyle.css' %}">
+  <script>
+    $(document).ready(function(){
+      $("#myModal").modal('show');
+    });
+  </script>
+
+    {% block head %}
+
+
+    {% endblock %}
+    <style>
+
+      .loader {
+      border: 16px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 16px solid #3498db;
+      width: 120px;
+      height: 120px;
+      -webkit-animation: spin 2s linear infinite; /* Safari */
+      animation: spin 2s linear infinite;
+      position: absolute;
+      top: 48%;
+      left: 48%;
+      z-index: 999;
+      }
+      @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      </style>
+      
+</head>
+
+  <body>
+
+  <nav class="navbar fixed-top navbar-expand-lg">
+		<a class="navbar-brand" href="{% url 'home:home' %}"><img src="{% static 'home/logo.png' %}" class="img-responsive logo" alt="APA logo"/></a>
+		  <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+	
+		  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+			<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+			  {% if request.user.is_authenticated %}
+		
+			  <!-- <li class="nav-item">
+				  <a class="nav-link title" href="{% url 'register' %}">Sign Up</a>
+				</li> -->
+			  <li class="nav-item">
+				  <a class="nav-link title" href=" {% url 'home:home' %} ">Home</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link title" href="{% url 'home:contactus' %}">Contact</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link title dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Your Profile
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item title" href="{% url 'account_update' %}">Update Profile</a>
+					  <a class="dropdown-item title" href="{% url 'password_change' %}">Change Password</a>
+					  <a class="dropdown-item title" href="{% url 'account_list' %}">Members</a>
+					  <div class="dropdown-divider"></div>
+					  <a class="dropdown-item title" href="{% url 'logout' %}">Logout</a>
+					</div>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link title dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Pages
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item title" href="{% url 'home:gallery' %}">Gallery</a>
+					  <a class="dropdown-item title" href="{% url 'home:video' %}">Videos</a>
+					  <a class="dropdown-item title" href="{% url 'home:visions' %}">Visions</a>
+					  <a class="dropdown-item title" href="{% url 'event:events' %}">Events</a>
+					  <a class="dropdown-item title" href="{% url 'home:resource' %}">Resources</a>
+
+				  </li>
+		
+
+			  {% else %}
+
+			  <li class="nav-item">
+				  <a class="nav-link title" href="{% url 'home:contactus' %}">Contact</a>
+				</li>
+			  <li class="nav-item">
+				  <a class="nav-link title" href="{% url 'login' %}">Login</a>
+				</li>
+			  <!-- <li class="nav-item">
+				  <a class="nav-link title" href="{% url 'register' %}">Sign Up</a>
+				</li> -->
+			  <li class="nav-item">
+		  <a class="nav-link title" href="{% url 'account_list' %}">Members</a>
+
+		</li>
+				  <li class="nav-item">
+            <a class="nav-link title" href="{% url 'home:visions' %}">Visions</a>
+		</li>
+		<li class="nav-item">
+		  <a class="nav-link title" href="{% url 'event:events' %}">Events</a>
+		</li>
+
+		  
+	
+	
+		  {% endif %}
+			  
+			</ul>
+		  </div>
+		
+    </nav>
+
+    <div class="space"></div>
+
+
+
+    <script>
+      var navbar = document.querySelector('nav')
+
+window.onscroll = function() {
+
+  // pageYOffset or scrollY
+  if (window.pageYOffset > 2) {
+    navbar.classList.add('scrolled')
+  } else {
+    navbar.classList.remove('scrolled')
+  }
+};
+  </script>
+
+<body>
+  <div class="loader"></div>
+
+  {% block content %}
+    
+  {% endblock content %}
+    
+</body>
+
+    <footer id="footer" class="section footer">
+        <div class="container">
+          <div class="footer__top">
+          
+            <div class="footer-top__box">
+              <h3 class="title text-left">INFORMATION</h3>
+              <a class="sub-title" href="{% url 'home:home' %}">About Us</a>
+              <a class="sub-title" href="#">Privacy Policy</a>
+              <a class="sub-title" href="{% url 'home:contactus' %}">Contact Us</a>
+            </div>
+        
+           {% if request.user.is_authenticated  %}
+
+           <div class="footer-top__box">
+            <h3 class="title text-left">MEMBERSHIP</h3>
+            <!-- <a class="sub-title" href="#">My Account</a> -->
+            <a class="sub-title" href="#">Update Account</a>
+            <a class="sub-title" href="#">Resources</a>
+            <a class="sub-title" href="#">Other members</a>
+          </div>
+
+          {% else %}
+
+          <div class="footer-top__box">
+            <h3 class="title text-left">MEMBERSHIP</h3>
+            <a class="sub-title" href="#">Get membership</a>
+            <a class="sub-title" href="#">View Members</a>
+            <a class="sub-title" href="#">Benefits</a>
+          </div>
+             
+           {% endif %}
+              
+            <div class="footer-top__box">
+              <h3 class="title text-left">Developers Contact</h3>
+           
+              <div class="sub-title">
+                developer@gmail.com
+              </div>
+              <div class="sub-title">
+
+              9477281022
+              </div>
+              <div class="sub-title">
+                Manipal, Karnataka              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer-bottom__box">
+
+          </div>
+          <div class="footer-bottom__box">
+
+          </div>
+        </div>
+        </div>
+      </footer>
+      
+      {% block scripts %}
+        
+      {% endblock scripts %}
+      <script>
+        $(document).ready(function() {
+        //Preloader
+        preloaderFadeOutTime = 500;
+        function hidePreloader() {
+        var preloader = $('.loader');
+        preloader.fadeOut(preloaderFadeOutTime);
+        }
+        hidePreloader();
+        });
+        </script>
+      <script src="jquery.counterup.min.js"></script>
+      <script type="text/javascript">
+
+        var myVar = "{{ myVar }}";
+    </script>
+    <script type="scripts/javascript" src="{% static 'home/app.js' %}"></script>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="app.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <script>
+      AOS.init({
+        once: true,
+
+      });
+    </script>
+</body>
+</html>

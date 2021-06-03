@@ -1,0 +1,65 @@
+{% extends 'home\base.html' %}
+{% load static %}
+
+{% block head %}
+
+<title>Our visions</title>
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+{% endblock head %}
+
+{% block content %}
+<body class="vision-body">
+    <div class="wrapper timeline" style="margin-top:10%;">
+        <dl class="timeline--entry" data-aos="fade-up" data-aos-duration="300">
+          <dt class="timeline--entry__title">Visions </dt>
+          <dd class="timeline--entry__detail">We want to propagate awareness and knowledge about ano-rectal surgery throughout the country.
+          </dd>
+          <dd class="timeline--entry__detail">We want to establish ano-rectal units in institutions and hospitals on a large scale and promote CME's on ano-rectal diseases.
+          </dd>
+          <dd class="timeline--entry__detail">We conduct fellowship exams, courses in Proctology for registered medical practitioners under government authorized institutions/universities,   UGC, Medical and Paramedical authorities. 
+          </dd>
+        </dl>
+        <dl class="timeline--entry" data-aos="fade-up" data-aos-duration="200" data-aos-delay="400">
+          <dt class="timeline--entry__title">Community  </dt>
+          <dd class="timeline--entry__detail">We bring together all qualified ano-rectal practitioners and discuss modern and traditional development in ano-rectal surgery. </dd>
+          <dd class="timeline--entry__detail">We organize social and cultural activities for members and felicitate the noted personalities for their exceptional and extraordinary work to encourage them to further work in the future and motivate others to follow them. 
+          </dd>
+    
+        </dl>
+        <dl class="timeline--entry" data-aos="fade-up" data-aos-duration="200" data-aos-delay="500"  >
+          <dt class="timeline--entry__title">Specialization</dt>
+          <dd class="timeline--entry__detail"> We train students and practitioners in ksharasutra and other advanced ano-rectal surgery practices. </dd>
+          <dd class="timeline--entry__detail"> We publish journals monthly / quarterly to guide practitioners in ano-rectal disorders.
+          </dd>
+    
+        </dl>
+        <dl class="timeline--entry" data-aos="fade-up" data-aos-duration="200" data-aos-delay="600" >
+          <dt class="timeline--entry__title">Social Service</dt>
+          <dd class="timeline--entry__detail">We aim to establish and run charitable hospitals and organize medical camps to provide Medical Aid, Health Education, and bring awareness about anorectal diseases. </dd>
+          <dd class="timeline--entry__detail">Our work is to adopt and implement all the schemes of Central and State Governments for maintaining the health of the people.</dd>
+          <dd class="timeline--entry__detail"> We aim to take up projects beneficial to the public at large from a medico legal point of view and run medico legal consultancy, nursing schools, and paramedical courses.</dd>        
+        </dl>
+        
+        
+    </div>
+</body>
+{% endblock content %}
+
+{% block scripts %}
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+<script>
+  AOS.init({
+    once: true,
+
+  });
+</script>
+    
+{% endblock scripts %}
+    
+    
+
+    

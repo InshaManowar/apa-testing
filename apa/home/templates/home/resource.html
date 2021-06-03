@@ -1,0 +1,74 @@
+{% extends 'home/base.html' %} {% load static %} 
+
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'home/event-copy.css' %}">
+
+    
+{% endblock head %}
+
+    
+{% block content %}
+
+    <header class="header">
+        <div class="text-box">
+          <h1 class="heading-primary">
+            <span class="heading-primary-main" style="font-size: 110%;"> Referance materials and books </span>
+          </h1>
+          <!-- <a href="#" class="btn btn-white btn-animated">SCROLL DOWN</a> -->
+        </div>
+        <div class="box">
+          <span></span>
+          <span></span>
+          <span></span>
+          </div>
+      </header>
+
+      <div class="container" style="margin-top: 5%;">
+        <h2 class="sub-title" style="margin-top: 7%;">Books</h2>
+
+    <div class="row">
+
+        <div class="col-lg-12" style="margin-top: 5%;">
+            <ul>
+              {% for resources in resource %}
+              <li>
+                  <h1 style="color: black !important; text-align: left;">{{ resources.book_title }}</h1> 
+                  <span class="book-details" style="font-weight: bold;font-size: large;""> 
+                  {% if resources.author_name %}
+                   <span style="font-weight: bold;font-size: large;""> by </span>
+                  {% endif %}
+                    {{ resources.author_name}}</span>
+  <span style="font-weight: bold; font-size: large;">
+    {% if resources.publisher_detail %}
+    , Publishers:
+  {% endif %}
+    {{ resources.publisher_detail }}
+  </span>
+   
+                    {% if resources.details %}
+                     <p> <span style="font-weight: bold;">More:</span> {{resources.details}}</p>
+                    {% endif %}
+                      
+
+                    <p><a href="{{ resources.pdf_link }}">{{ resources.clickable_text}}</a></p>
+
+
+            </li>
+
+            <hr style="height: 150%;">
+
+              {% endfor %}
+                  
+            </ul>
+
+        </div>
+
+        
+    </div>
+</div>
+    <div style="height: 200px;"></div>
+{% endblock content %}
+
+
+    
