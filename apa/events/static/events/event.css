@@ -123,11 +123,15 @@ width: 80px;
 height: auto !important;
 fill: white;
 padding-right: 15px;
-margin-top: 2px;
+margin-top: -9px;
 border-radius: 30%;
 }
   /*NAVBAR CODE ENDS HERE*/
-.text-box h1{
+  
+
+
+
+  .text-box h1{
     color:white;
     font-family: Oswald;
     letter-spacing: 5px;
@@ -148,12 +152,12 @@ border-radius: 30%;
     padding: 2%;
     font-family: Josefin Sans !important;
   }
-
+  
   .apa-event-images img{
     padding: 2%;
     width: 40% ;
   }
-
+  
   @media only screen and (max-width: 768px) {
     .apa-event-images img{
       width: 100%;
@@ -162,14 +166,14 @@ border-radius: 30%;
       margin-top: 20px;
       font-size: 250%;
       color:white;
-
+  
     }
     .apa-events-table-header{
       font-size: 15px !important;
       font-family: Oswald;
     }
-
-
+  
+  
   }
   .apa-events-detail-page{
     background-color: #b8c6db;
@@ -191,7 +195,7 @@ border-radius: 30%;
     background: #fff;
     transform: skewY(-10deg);
     transform-origin: top left;
-
+  
   }
   .header {
     height: 70vh;
@@ -204,7 +208,7 @@ border-radius: 30%;
     background-size: cover;
     background-position: top;
     position: relative;
-
+  
     clip-path: polygon(100% 0%, 100% 77%, 50% 100% ,0% 75%, 0 0);
   }
   .box{
@@ -212,9 +216,9 @@ border-radius: 30%;
       top: 70%;
       left: 50%;
       transform: translate(-2%, -2%);
-
+  
   }
-
+  
   .box span{
       display: block;
       width: 20px;
@@ -225,19 +229,19 @@ border-radius: 30%;
       margin: -10px;
       animation: animate 2s infinite;
   }
-
+  
   .box span:nth-child(2)
   {
       animation-delay: -0.2s;
   }
-
+  
   .box span:nth-child(3)
   {
       animation-delay: -0.4s;
   }
-
+  
   @keyframes animate{
-
+  
       0%{
           opacity: 0;
           transform: rotate(45deg) translate(-20px, -20px);
@@ -255,9 +259,9 @@ border-radius: 30%;
     top: 40px;
     left: 40px;
   }
-
+  
   .brand { font-size: 20px; }
-
+  
   .text-box {
     position: absolute;
     top: 50%;
@@ -265,29 +269,29 @@ border-radius: 30%;
     transform: translate(-50%, -50%);
     text-align: center;
   }
-
+  
   .heading-primary {
     color: #fff;
     text-transform: uppercase;
-
+  
     backface-visibility: hidden;
     margin-bottom: 30px;
   }
-
+  
   .heading-primary-main {
     display: block;
     font-size: 26px;
     font-weight: 400;
     letter-spacing: 5px;
   }
-
+  
   .heading-primary-sub {
     display: block;
     font-size: 18px;
     font-weight: 700;
     letter-spacing: 7.4px;
   }
-
+  
   .btn:link,
   .btn:visited {
     text-transform: uppercase;
@@ -298,33 +302,40 @@ border-radius: 30%;
     transition: all .2s;
     position: relative;
   }
-
+  
   .btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
-
+  
   .btn:active {
     transform: translateY(-1px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   }
-
+  
   .btn-white {
     background-color: #fff;
     color: #777;
   font-size: 14px;
   }
   .apa-events-table-header{
-
+  
     background-color: #537895;
     background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
     color: white;
     font-family: Oswald;
     font-size: 30px;
     letter-spacing: 3px;
-
+  
   }
   .first-character {font-weight:400; float: left; font-size: 84px; line-height: 64px; padding-top: 4px; padding-right: 8px; padding-left: 3px; font-family: 'Source Sans Pro', sans-serif;}
+  
+  
+  
+  
+  
+
+
   /*
   ======================
   Footer
@@ -332,7 +343,7 @@ border-radius: 30%;
   */
 
   .footer {
-    background-color: var(--green-deep);
+    background-color: var(--my-black);
     padding: 2.6rem 1rem;
     line-height: 1.5rem;
     height: auto;
@@ -346,7 +357,7 @@ border-radius: 30%;
 
   .footer__top {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     color: var(--green-light);
   }
 
@@ -378,7 +389,7 @@ border-radius: 30%;
 
   @media only screen and (max-width: 998px) {
     .footer__top {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       row-gap: 2rem;
     }
   }
