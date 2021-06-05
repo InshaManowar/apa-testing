@@ -11,9 +11,7 @@
   --my-tomato: #d77257;
   --my-orange:#f7b157;
   --my-yellow:#f9f871;
-
 }
-
 
 * {
   margin: 0;
@@ -24,13 +22,10 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  overflow-x: hidden;
-
 }
   body{
-    position: relative;
+    overflow-x: hidden;
   }
-
   @import url('https://fonts.googleapis.com/css?family=Montserrat');
   /*  Section 2  */
   @media only screen and (max-width: 768px) {
@@ -142,7 +137,7 @@ html {
 
   .onoffswitch3-label {
       display: block; overflow: hidden; cursor: pointer;
-      border: 0px solid #f7f5f5; border-radius: 0px;
+      border: 0px solid #999999; border-radius: 0px;
   }
 
   .onoffswitch3-inner {
@@ -215,38 +210,44 @@ html {
     background: var(--my-tomato); /* background when scroll is in the top */
     transition: background 2s; /* control how smooth the background changes */
     }
-
-    nav.scrolled {
-      background-color: var(--my-tomato);
-      color: white !important;
-        -webkit-box-shadow: 0 8px 6px -6px rgb(48, 47, 47);
-    -moz-box-shadow: 0 8px 6px -6px rgb(66, 66, 66);
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;color: black !important;
-    /* control how smooth the background changes */
     
-    }
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f1f1f1 !important;
-      min-width: 160px;
-      box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.2);
-      z-index: 1;
-      }
-      
-      .dropdown-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-      }
-      
-      .dropdown-content a:hover {
-      background-color: #ddd;
-      }
-      .title{
-        color: rgb(19, 18, 18) !important;
-      }
+  nav.scrolled {
+    background-color: var(--my-tomato);
+    color: white !important;
+      -webkit-box-shadow: 0 8px 6px -6px rgb(48, 47, 47);
+  -moz-box-shadow: 0 8px 6px -6px rgb(66, 66, 66);
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;color: black !important;
+  /* control how smooth the background changes */
+  
+  }
+  .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1 !important;
+  min-width: 160px;
+  box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  }
+  
+  .dropdown-content a {
+  color: black !important;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  }
+  
+  .dropdown-content a:hover {
+  background-color: #ddd;
+  }
+  
+  a.dropdown-item{
+    color: #000 !important;
+  }
+  a.dropdown-item:hover{
+    color: gray !important;
+    background-color: var(--my-tomato) !important;
+  }
+
 
 .dropdown:hover .dropdown-content {
 display: block;
@@ -300,8 +301,6 @@ font-family: Josefin Sans !important;
 .title{
   font-size: 300%;
   font-family: Josefin Sans !important;
-  color: rgb(17, 16, 16) !important;
-
 
 }
 .sub-title{
@@ -393,11 +392,7 @@ font-family: Josefin Sans !important;
   .sub-title{
 
     font-size:20px; font-weight:400; text-transform: uppercase; color:black; padding:0; margin:0;}
-.title{
 
-    color: rgb(185, 179, 179) !important;
-
-}
   .title{
     font-size:30px; letter-spacing:10px; text-align:center; color:rgb(252, 252, 252); font-weight:400; text-transform:uppercase; z-index:10; opacity:.8;    }
     .icon-box{
@@ -475,7 +470,7 @@ border-radius: 45px;
 padding: 1% !important;
 }
 .team-boxed {
-  margin-top: 10%;
+  margin-top: 5%;
   color:#313437;
   background-color: white !important;
 }
@@ -507,8 +502,8 @@ padding: 1% !important;
 }
 .box:hover{
       box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.377), 0 2px 20px 0 rgba(0, 0, 0, 0.37);
-      background-color: #c9eece !important;
-      transition: all 0.4 ease;
+      background-color: #f8f9d2;
+      background-image: linear-gradient(315deg, #f8f9d2 0%, #e8dbfc 74%);           transition: all 0.4 ease;
   transition-delay: 0.1s;
   transition-duration: 2s;  }
 .rounded_circle{
@@ -672,8 +667,6 @@ Footer
   height: auto;
 }
 
-
-
 .footer-top__box span {
   margin-right: 1rem;
 }
@@ -682,6 +675,10 @@ Footer
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   color: var(--green-light);
+}
+
+.text-left{
+  color: white !important;
 }
 
 .footer-top__box a:link,
@@ -761,9 +758,9 @@ background-color: #20bf55;
 }
 @media (max-width: 768px) {
   .apa-btn-ripple{
-    margin-top: 9%;
+    margin-top: -20%;
     font-size: 13px !important;
-    padding: 5px 12px;
+    padding: 30px 12px;
 
   }
 }
@@ -993,8 +990,7 @@ color: rgb(235, 229, 229) !important;
 
 /* Section - Parallax */
 /**************************/
-#parallax-apa .parallax-one {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image:
-   url('accounts/aboutus-bg.png'); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: top center;}
+#parallax-apa .parallax-one {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://images.unsplash.com/photo-1593278586069-5ccc805ef854?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: top center;}
 #parallax-apa .parallax-two {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://images.unsplash.com/photo-1585241936939-be4099591252?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
 #parallax-apa .parallax-three {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://images.unsplash.com/photo-1512677859289-868722942457?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1053&q=80); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
 #parallax-apa .parallax-four {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://images.unsplash.com/photo-1596188253489-e13a76f5bf3b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: top center;}
@@ -1045,7 +1041,7 @@ color: rgb(235, 229, 229) !important;
 }
 
 .vision-wrap{
-  margin-top: 10%;
+  margin-top: 4%;
 }
 .toggler-color{
   color: rgb(148, 147, 147) !important;
@@ -1246,9 +1242,4 @@ form.example::after {
 }
 .apa-box-section-odd span a{
   padding: 3% ;
-}
-
-.title{
-  color: rgb(185, 179, 179) !important;
-
 }

@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = ')--3vd0e483xwc6iako#1gjjo99)p72ez791_u2ynqj1w7r_9@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -53,7 +53,7 @@ INSTALLED_APPS = [
     'subscribe',
     'accounts',
     'phonenumber_field',
-    'pwa',
+    #'pwa',
    
 
     
@@ -164,5 +164,5 @@ LOGIN_URL = 'login/'
 LOGIN_REDIRECT_URL = 'login/'
 
 AUTH_USER_MODEL = 'accounts.Account'
-PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'apa\home\static\home\js', 'serviceworker.js')
+#PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'apa\home\static\home\js', 'serviceworker.js')
 
