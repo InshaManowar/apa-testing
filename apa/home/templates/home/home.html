@@ -45,18 +45,18 @@
   <label class="onoffswitch3-label" for="myonoffswitch3">
       <span class="onoffswitch3-inner">
           <span class="onoffswitch3-active">
-              <marquee class="scroll-text"> 
+              <marquee class="scroll-text" style="font-family: Josefin Sans; font-size: 115%; color: rgb(236, 240, 21);"> 
                
                {% for new in events %}
                {{ new.event_name }} : {{ new.event_info }}
                {% endfor %}
                  
             </marquee>
-              <span class="onoffswitch3-switch" style="padding:0.2%">UPCOMING EVENTS <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+              <span class="onoffswitch3-switch" style="padding:0.2%; font-family: Oswald; letter-spacing: 1.5px;"> UPCOMING EVENTS <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
                 <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
               </svg></span>
           </span>
-          <span class="onoffswitch3-inactive"><span class="onoffswitch3-switch">SHOW UPCOMING EVENTS </span></span>
+          <span style="background-color: rgb(59, 59, 59);" class="onoffswitch3-inactive"><span class="onoffswitch3-switch" >SHOW UPCOMING EVENTS </span></span>
       </span>
   </label>
 </div>
@@ -265,7 +265,7 @@
   </h5>
 </div>
 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-  <div class="card-body">
+  <div class="card-body description">
     We train students and practitioners in ksharasutra and other advanced ano-rectal surgery practices  </div>
 </div>
 </div>
@@ -278,7 +278,7 @@ Charity and awareness
   </h5>
 </div>
 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-  <div class="card-body">
+  <div class="card-body description">
     We aim to establish and run charitable hospitals and organize medical camps to provide Medical Aid, Health Education, and bring awareness about anorectal diseases.   </div>
 </div>
 </div>
