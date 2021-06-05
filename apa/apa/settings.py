@@ -98,12 +98,10 @@ WSGI_APPLICATION = 'apa.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'OPTIONS': {
-            'sql_mode': 'traditional',},
         'NAME': 'apa',
         'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '127.0.0.1',
+        'PASSWORD':'Ayurved17$2020',
+        'HOST': 'localhost',
         'PORT': '3306',
     }
 }
