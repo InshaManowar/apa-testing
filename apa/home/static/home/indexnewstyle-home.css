@@ -642,14 +642,20 @@ accordian menu code
   width: 100%;
   height: 60px;
   color: black!important;
-  font-weight: bold!important;
   text-align: left;
+  font-family: Oswald;
+  letter-spacing: 1.4px;
   text-decoration: none;
-
+  font-size: 85%;
 }
 .card-body{
   background: #e8eeff;
-
+}
+.btn-link:hover{
+  text-decoration: none;
+}
+.btn-link:focus{
+  text-decoration: none;
 }
 .btn-link:after{
   content: '\2212';
@@ -920,7 +926,7 @@ color: rgb(235, 229, 229) !important;
   margin-top:7%;
   margin-bottom:8%;
   text-align: justify;
-  font-family: sans-serif;
+  font-family: Josefin Sans;
    font-weight:400; font-size:14px; line-height:24px;
 
 }
