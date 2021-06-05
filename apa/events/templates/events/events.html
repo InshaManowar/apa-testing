@@ -7,7 +7,7 @@
 {% endblock %}
 {% block content %}
 
-<header class="header" style="margin-bottom: 15%;">
+<header class="header" style="margin-bottom: 10%;">
   <div class="text-box">
     <h1 class="heading-primary">
       <span class="heading-primary-main" style="font-size: 110%;"> {{ event.title }} </span>
@@ -26,7 +26,8 @@
 
   <div class="row">
    <div class="col-lg-7">
-    <h3 >{{ event.subtitle }}</h3>
+    <h3 style="  font-family: Josefin Sans !important;
+    " >{{ event.subtitle }}</h3>
     <p style="padding: 1%; line-height:160%;"> {{ event.content}} </p>
    </div>
   <div class="col-lg-5">
@@ -59,11 +60,13 @@
 {% for t in table %}
     <tr>
       <th scope="row"></th>
-     <td> {{ t.start_date_for_day }} - {{ t.end_date_for_day }} </td>
+     <td style="  font-family: Josefin Sans !important;
+     "> {{ t.start_date_for_day }} - {{ t.end_date_for_day }} </td>
      <td>
         <ul type="disc">
-           <h3>{{ t.title_for_day }}</h3>
-            {{ t.description_for_day }}
+           <h3 style="  font-family: Josefin Sans !important;
+           ">{{ t.title_for_day }}</h3>
+           <p style=" font-family: Josefin Sans !important;"> {{ t.description_for_day }}</p>
          </ul>
         </td>
     </tr>    

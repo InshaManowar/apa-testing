@@ -14,7 +14,7 @@ href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     
 {% block content %}
 
-<body style="background-color: #b8c6db;
+<body style="background-color: #e4ebf7;
 background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);">
 
 
@@ -104,51 +104,61 @@ background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);">
 </form>
 
 </div>
-  <div class="row justify-content-center mt-5 mb-5">
+
  
- {% for account_!superuser in accounts %}
+ {% if request.account.is_staff %}
 
- <div data-aos="fade-up" data-aos-duration="300" class="col-md-4 col-lg-2 card mx-5 mb-4 shadow">
-    <div class="zoom">
+ 
+<div class="container-fluid my-5" style="margin-left: 4%;">
+  <div class="row content-center mt-4 mb-5">
+ 
+    {% for account in accounts %}
+   
+    <div data-aos="fade-up" data-aos-duration="300" class="col-md-4 col-lg-2 card mx-5 mb-4 shadow">
+       <div class="zoom">
+           
+           {% if account.profile_image %}
+           
+           <img class="img-fluid-member" src="{{ account.profile_image.url }}" data-toggle="tooltip" data-placment="right" title="{{ account.first_name }}"/>
+           
+           {% else %}
+   
+           <img class="img-fluid-member" src="{% static 'accounts/default.png' %}" data-toggle="tooltip" data-placment="right" title="{{ account.first_name }}"/>
+   
+           {% endif %}
+               
         
-        {% if account.profile_image %}
+       </div>
+       <p class="description">
+         <span class="bold-text">Name: </span>
+         <span class="name-tag">{{ account.first_name}} {{ account.last_name}}</span>
+         <br />
+         <span class="bold-text">Designation:</span>
+         <span class="name-tag">{{ account.designation }} </span>
+         <br />
+         <span class="bold-text">Contact:</span> 
+         <span class="name-tag">{{ account.phone }}</span>
+         <br />
+         <span class="bold-text">Clinic:</span> 
+         <span class="name-tag">{{ account.address }}</span>
+         <br />
+       </p>
+       <!-- <a href="{% url 'account_details' %}">
+         <div class="btn btn-danger">Read more</div>
+   
+       </a> -->
+     </div>
         
-        <img class="img-fluid-member" src="{{ account.profile_image.url }}" data-toggle="tooltip" data-placment="right" title="{{ account.first_name }}"/>
         
-        {% else %}
+        
+    {% endfor %}
+        
+     </div>
+</div>
 
-        <img class="img-fluid-member" src="{% static 'accounts/default.png' %}" data-toggle="tooltip" data-placment="right" title="{{ account.first_name }}"/>
-
-        {% endif %}
-            
-     
-    </div>
-    <p class="description">
-      <span class="bold-text">Name: </span>
-      <span class="name-tag">{{ account.first_name}} {{ account.last_name}}</span>
-      <br />
-      <span class="bold-text">Designation:</span>
-      <span class="name-tag">{{ account.designation }} </span>
-      <br />
-      <span class="bold-text">Contact:</span> 
-      <span class="name-tag">{{ account.phone }}</span>
-      <br />
-      <span class="bold-text">Clinic:</span> 
-      <span class="name-tag">{{ account.address }}</span>
-      <br />
-    </p>
-    <!-- <a href="{% url 'account_details' %}">
-      <div class="btn btn-danger">Read more</div>
-
-    </a> -->
-  </div>
-     
-     
-     
- {% endfor %}
-     
-  </div>
-
+   
+ {% endif %}
+   
   
     <div id="content-container" class="container  p-none" style="margin-top: 10%;">
         <div id="al-container" class="side-p">

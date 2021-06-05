@@ -756,17 +756,20 @@ color: black;
 }.apa-btn-ripple:nth-child(2){
 background-color: #20bf55;
 }
+
+
+
 @media (max-width: 768px) {
   .apa-btn-ripple{
-    margin-top: 9%;
-    font-size: 13px !important;
-    padding: 5px 12px;
-
+    font-size: 20px !important;
+    padding: 15px 12px;
   }
 }
+
 .slide p{
 color: rgb(235, 229, 229) !important;
 }
+
 
 *{
   padding: 0;
@@ -873,15 +876,7 @@ color: rgb(235, 229, 229) !important;
    font-weight:400; font-size:14px; line-height:24px;
 
 }
-  @media (max-width: 768px) {
-    .apa-btn-ripple{
-      margin-top: 9%;
-      font-size: 13px !important;
-      padding: 5px 12px;
-
-    }
-  }
-
+ 
 
 .event-page-box{
   background-color: white;

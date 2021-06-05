@@ -142,7 +142,7 @@ html {
 
   .onoffswitch3-label {
       display: block; overflow: hidden; cursor: pointer;
-      border: 0px solid #999999; border-radius: 0px;
+      border: 0px solid #f7f5f5; border-radius: 0px;
   }
 
   .onoffswitch3-inner {
@@ -245,7 +245,7 @@ html {
       background-color: #ddd;
       }
       .title{
-        color: rgb(223, 209, 209) !important;
+        color: rgb(19, 18, 18) !important;
       }
 
 .dropdown:hover .dropdown-content {
@@ -300,7 +300,7 @@ font-family: Josefin Sans !important;
 .title{
   font-size: 300%;
   font-family: Josefin Sans !important;
-  color: rgb(185, 179, 179) !important;
+  color: rgb(17, 16, 16) !important;
 
 
 }

@@ -146,6 +146,7 @@ border-radius: 30%;
   .apa-event-description p {
     text-align: justify;
     padding: 2%;
+    font-family: Josefin Sans !important;
   }
 
   .apa-event-images img{
@@ -165,6 +166,7 @@ border-radius: 30%;
     }
     .apa-events-table-header{
       font-size: 15px !important;
+      font-family: Oswald;
     }
 
 
@@ -370,6 +372,8 @@ border-radius: 30%;
   .footer-top__box h3 {
     font-size: 1rem;
     font-weight: 400;
+    font-family: Josefin Sans !important;
+
   }
 
   @media only screen and (max-width: 998px) {
