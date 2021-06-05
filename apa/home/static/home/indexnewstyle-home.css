@@ -128,7 +128,7 @@ html {
   .onoffswitch3
   {
       position: relative;
-      background-color: #000
+      background-color: #000;
   }
   .section-2 .cover {
     background-color:var(--green-medium);
@@ -651,6 +651,10 @@ accordian menu code
 .card-body{
   background: #e8eeff;
 }
+.card-body.description{
+  font-family: Josefin Sans;
+}
+
 .btn-link:hover{
   text-decoration: none;
 }
@@ -1075,7 +1079,7 @@ color: rgb(235, 229, 229) !important;
 }
 .apa-heading{
 
-  margin-top: 40%;
+  margin-top: 30%;
   letter-spacing: 3px;
   font-size: 300%;
   
