@@ -13,6 +13,5 @@ urlpatterns = [
     path('videos/', views.video_view, name='video'),
     path('contactus/', views.contactus, name='contactus'),
     path('resources/', views.resource_view, name='resource'),
-    path('', include('pwa.urls')),
 
 ]
