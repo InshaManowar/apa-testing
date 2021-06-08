@@ -170,6 +170,7 @@ section {
 }
 .orange-text {
   color: var(--my-yellow);
+  font-family: Oswald !important;
 }
 
 .zoom,
@@ -196,14 +197,19 @@ section {
   font-weight: 600;
   padding: 3%;
   font-size: 18;
+  font-family: Josefin Sans;
 }
 
 .description .name-tag {
   font-size: 18;
+  font-family: Josefin Sans;
+
 }
 .description{
   padding: 3%;
   text-align: justify;
+  font-family: Josefin Sans;
+
 }
 .apa-search-bar{
   width: 500px;

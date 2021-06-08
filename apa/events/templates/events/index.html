@@ -17,8 +17,11 @@
 
 
 {% if event_list %}
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+<div class="container ">
 
-<div class="container">
     <div class="row people">
       
         {% for event in event_list %}
@@ -32,7 +35,7 @@
             <div class="sub-text sub-title">{{ event.startdate}} - {{ event.enddate }}</div>
 
             <p class="description">{{ event.content|slice:":200" }} ... </p>
-            <div class="social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+            <!-- <div class="social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div> -->
                 <a class="apa-btn-ripple sub-title" href="{% url 'event:details' event.slug  %}">Read more</a>
 
           </div>
@@ -45,6 +48,7 @@
 {% else %}
 
 <div class="container" class="text-center m-auto">
+ 
     <p> We do not have any upcoming events, please check in later.</p>
 <hr>
 <a class="text-center" href="{% url 'home:home' %}"> Take me to home page </a>

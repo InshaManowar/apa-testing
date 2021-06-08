@@ -21,6 +21,7 @@
   box-sizing: inherit;
 }
 
+
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -1160,10 +1161,10 @@ h1 {
   background-color: #eeeeee;
 }
 .timeline--entry__title {
-  color: white;
+  color: rgb(65, 48, 48);
   background-color: var(--green-medium);
   font-weight: 300;
-  font-family: Josefin Sans ;
+  font-family: Oswald !important ;
   font-size: 1.7rem;
   padding: 1em;
 }
@@ -1182,6 +1183,7 @@ h1 {
   background-color: var(--green-light);
   padding: 1em;
   margin: 0;
+  font-family: Josefin Sans !important;
 }
 .timeline--entry:before {
   content: "";
@@ -1328,4 +1330,35 @@ form.example::after {
 }
 .apa-btn-design a:focus{
   color: black;
+}
+
+
+.bg {
+  animation:slide 20s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #84c8ff 50%, #09203f 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:14s;
+}
+
+.bg3 {
+  animation-duration:14s;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
 }
