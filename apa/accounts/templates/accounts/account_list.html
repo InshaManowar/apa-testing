@@ -30,23 +30,21 @@ background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);">
       >
         <span style="font-family: Oswald;">Our</span> <span class="orange-text">Team</span>
       </h1>
-      <p class="decription" data-aos="fade-zoom-in" data-aos-duration="1200" style="font-family: Josefin Sans;">
-        We provide high standar clean website for your business solutions.
-        <a href="teams.html"> see entire team</a>
+      <p style="margin-bottom: 5%;" class="decription" data-aos="fade-zoom-in" data-aos-duration="1200" style="font-family: Josefin Sans;">
+        Meet our team of highly efficient and advanced ano-rectal surgeons, members of our APA team and everyone involved in providing you the best ayurved proctology solution.
+        
       </p>
       <div class="slider">
         <div class="slide">
           <img
-            src="https://i.pinimg.com/originals/55/51/40/55514035db170ab919ab2d21830714a4.png"
+            src="{% static 'accounts/Dr.ManishDhuri.jpeg' %}"
             alt=""
           />
           <p class="description" style="font-family: Josefin Sans;">
-            "Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum"
+            " I feel extremely overwhelmed to share and enhance the knowledge of practical proctology through this website, for the first time in India.
+            I hope that everyone who wishes to treat their patients effectively and confidently shall visit this website and get more familiar with with the ayurved therapies"
           </p>
-          <span style="font-family: Josefin Sans;">- Damon Salvatore, Company ABC</span>
+          <span style="font-family: Josefin Sans;">-Dr. Manish Dhuri, MS Ayurved Gold Medalist, Treasurer at APA</span>
         </div>
         <div class="slide">
           <img
@@ -135,14 +133,17 @@ background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);">
          <span  class="bold-text">Name: </span>
          <span class="name-tag">{{ account.first_name}} {{ account.last_name}}</span>
          <br />
-         <span class="bold-text">Designation:</span>
+         <span class="bold-text">Qualification:</span>
          <span class="name-tag">{{ account.designation }} </span>
-         <br />
-         <span class="bold-text">Contact:</span> 
-         <span class="name-tag">{{ account.phone }}</span>
          <br />
          <span class="bold-text">Clinic:</span> 
          <span class="name-tag">{{ account.address }}</span>
+         <br />
+         <span class="bold-text">Phone:</span> 
+         <span class="name-tag">{{ account.phone }}</span>
+         <br />
+         <span class="bold-text">Email:</span> 
+         <span class="name-tag">{{ account.email }}</span>
          <br />
        </p>
        <!-- <a href="{% url 'account_details' %}">
