@@ -35,28 +35,63 @@
     {% endblock %}
     <style>
 
-      .loader {
-      border: 16px solid #f3f3f3;
-      border-radius: 50%;
-      border-top: 16px solid #3498db;
-      width: 120px;
-      height: 120px;
-      -webkit-animation: spin 2s linear infinite; /* Safari */
-      animation: spin 2s linear infinite;
-      position: absolute;
-      top: 48%;
-      left: 48%;
-      z-index: 999;
-      }
-      @-webkit-keyframes spin {
-        0% { -webkit-transform: rotate(0deg); }
-        100% { -webkit-transform: rotate(360deg); }
-      }
-      
-      @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-      }
+.loader{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%); 
+}
+.circle{
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: #d77257;
+  border-radius: 50%;
+  animation: loading 1.5s cubic-bezier(.8, .5, .2, 1.4) infinite;
+  transform-origin: bottom center;
+  position: relative;
+}
+@keyframes loading{
+  0%{
+    transform: translateY(0px);
+    background-color: #ffb09a;
+  }
+  50%{
+    transform: translateY(50px);
+    background-color: #d77257;
+  }
+  100%{
+    transform: translateY(0px);
+    background-color: #bb583c;
+  }
+}
+.circle-1{
+  animation-delay: 0.1s;
+}
+.circle-2{
+  animation-delay: 0.2s;
+}
+.circle-3{
+  animation-delay: 0.3s;
+}
+.circle-4{
+  animation-delay: 0.4s;
+}
+.circle-5{
+  animation-delay: 0.5s;
+}
+.circle-6{
+  animation-delay: 0.6s;
+}
+.circle-7{
+  animation-delay: 0.7s;
+}
+.circle-8{
+  animation-delay: 0.8s;
+}
+
+
+/* footer  */
       </style>
       
 </head>
@@ -159,8 +194,18 @@ window.onscroll = function() {
   </script>
 
 <body>
-  <div class="loader"></div>
-
+  <div class="loader">
+    <span class="circle circle-1"></span>
+    <span class="circle circle-2"></span>
+    <span class="circle circle-3"></span>
+    <span class="circle circle-4"></span>
+    <span class="circle circle-5"></span>
+    <span class="circle circle-6"></span>
+    <span class="circle circle-7"></span>
+    <span class="circle circle-8"></span>
+  </div>
+  
+  
   {% block content %}
     
   {% endblock content %}
