@@ -214,18 +214,27 @@ section {
 .apa-search-bar{
   width: 500px;
   margin-top: 5%;
+  font-family: Oswald;
+  letter-spacing: 1.3px !important; 
   margin-bottom: 5%;
+  font-size: 220% !important;
+}
+
+p{
+  font-family: Josefin Sans;
 }
 
 .apa-btn-design{
-  background-color: rgba(0, 0, 0, 0.89);
-  color: rgb(182, 179, 179);
+  background-color: rgba(255, 255, 255, 0.89);
   width: 50%;
+  border: 2px solid var(--my-yellow);
+  letter-spacing: 1.3px;
+  font-size: 60%;
   border-radius: 45px;
 }
 .apa-btn-design:hover{
-  background-color: rgba(179, 175, 175, 0.89);
-  color: rgb(26, 25, 25);
+  background-color: #f8f9d2;
+  background-image: linear-gradient(315deg, #f8f9d2 0%, #e8dbfc 74%); 
  transition-duration: 1s;
 }
 .apa-paginate-btn{
@@ -243,21 +252,25 @@ list-style:none;
  transition-duration: 1s;
 }
 .card{
-  background-color: white !important;
+  background-color: rgb(255, 255, 255) !important;
+}
+.card:hover{
+  background-color: #f8f9d2;
+  background-image: linear-gradient(315deg, #f8f9d2 0%, #e8dbfc 74%); 
 }
 .image-fluid-member{
-  width: 300px !important;
-  height: auto;
+
+  height: 50%;
 
 }  @media only screen and (max-width: 768px) {
   .apa-btn-design{
-    width: 90px !important;
+    width: 100px !important;
     position: relative;
-    right: 50px;
+    right: 20%;
   }
   .apa-search-bar input{
-    width: 210px;
-  
+align-content: center;
+width: 58%;  
   }
 
 }
