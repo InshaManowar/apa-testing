@@ -246,7 +246,7 @@ list-style:none;
   background-color: white !important;
 }
 .image-fluid-member{
-  width: fit-content !important;
+  width: 300px !important;
   height: auto;
 
 }  @media only screen and (max-width: 768px) {

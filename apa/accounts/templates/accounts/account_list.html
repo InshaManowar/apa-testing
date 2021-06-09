@@ -17,8 +17,8 @@ href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     
 {% block content %}
 
-<body style="background-color: #e4ebf7;
-background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);">
+<body style="background-color: #fcfcfc;
+background-image: linear-gradient(315deg, #e5e9f0 0%, #f5f7fa 74%);">
 
 
   <section class="reviews text-center testimonial-section">
@@ -119,31 +119,37 @@ background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);">
            
            {% if account.profile_image %}
            
-           <img class="img-fluid-member" src="{{ account.profile_image.url }}" data-toggle="tooltip" data-placment="right" title="{{ account.first_name }}"/>
+           <img class="img-fluid-member"  src="{{ account.profile_image.url }}" data-toggle="tooltip" data-placment="right" title="{{ account.first_name }}"/>
            
            {% else %}
    
-           <img class="img-fluid-member" src="{% static 'accounts/default.png' %}" data-toggle="tooltip" data-placment="right" title="{{ account.first_name }}"/>
+           <img class="img-fluid-member text-center"  src="{% static 'accounts/default.png' %}" data-toggle="tooltip" data-placment="right" title="{{ account.first_name }}"/>
    
            {% endif %}
                
         
        </div>
-       <p class="description">
-         <span  class="bold-text">Name: </span>
-         <span class="name-tag">{{ account.first_name}} {{ account.last_name}}</span>
+       <p class="description text-center">
+         <!-- <span  class="bold-text">Name: </span> -->
+         <span style="font-weight: 600; font-size: 150%;" class="name-tag">{{ account.first_name}} {{ account.last_name}}</span>
          <br />
-         <span class="bold-text">Qualification:</span>
-         <span class="name-tag">{{ account.designation }} </span>
+         <!-- <span class="bold-text">Qualification:</span> -->
+         <span class="name-tag"> - {{ account.designation }} </span>
          <br />
-         <span class="bold-text">Clinic:</span> 
-         <span class="name-tag">{{ account.address }}</span>
+         <!-- <span class="bold-text">Clinic:</span>  -->
+         <span  class="name-tag">{{ account.address }}</span>
          <br />
-         <span class="bold-text">Phone:</span> 
-         <span class="name-tag">{{ account.phone }}</span>
-         <br />
-         <span class="bold-text">Email:</span> 
-         <span class="name-tag">{{ account.email }}</span>
+         <!-- <span class="bold-text">Phone:</span>  -->
+     
+         <a style="padding: 7%;" class="name-tag" href="tel:{{ account.phone }}">    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+        </svg></a>
+      
+         <!-- <span class="bold-text">Email:</span>  -->
+         
+         <a style="padding: 7%;" class="name-tag" href="mailto:{{ account.email }} "><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+          <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+        </svg></a>
          <br />
        </p>
        <!-- <a href="{% url 'account_details' %}">
