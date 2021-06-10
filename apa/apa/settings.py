@@ -53,7 +53,7 @@ INSTALLED_APPS = [
     'subscribe',
     'accounts',
     'phonenumber_field',
-    'pwa',
+  
    
 
     
