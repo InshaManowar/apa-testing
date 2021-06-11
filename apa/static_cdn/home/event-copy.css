@@ -241,7 +241,6 @@ border-radius: 30%;
   */
 
   @media only screen and (max-width: 768px) {
-   
     .apa-image{
       width: 300px;
     }
