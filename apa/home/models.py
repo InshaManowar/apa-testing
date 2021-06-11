@@ -30,8 +30,7 @@ class Video(models.Model):
     created_time = models.DateTimeField( default= datetime.now())
     class Meta:
             ordering = ['-created_time', ]
-    def __str__(self):
-        return self.title
+   
    
     
 class VideoDisplay(models.Model):
