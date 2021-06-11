@@ -3,6 +3,7 @@
 PopUp
 =============
  */
+/*
 const popup = document.querySelector(".popup");
 const closePopup = document.querySelector(".popup__close");
 
@@ -17,3 +18,4 @@ if (popup) {
     }, 500);
   });
 }
+*/
