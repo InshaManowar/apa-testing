@@ -39,7 +39,7 @@ class VideoDisplay(models.Model):
     display = models.TextField( default = None, blank=True)
  
     def __str__(self):
-        return self.videos
+        return str(self.videos)
     
 class VideoSidebar(models.Model):
     videos = models.ForeignKey(Video, default=None, on_delete=models.CASCADE)
