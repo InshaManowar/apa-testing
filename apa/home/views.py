@@ -54,7 +54,7 @@ def contactus(request):
             recepient = str(form['email_address'].value())
 
             try:
-                send_mail(subject, message, recepient, ['isterecruitments2020@gmail.com']) 
+                send_mail(subject, message, recepient, ['ayurvedproctologyassociation@gmail.com']) 
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect ("home:home")
