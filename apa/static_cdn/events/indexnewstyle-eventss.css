@@ -122,10 +122,7 @@ font-family: Oswald !important;
   .title{
     font-size:30px; letter-spacing:10px; text-align:center; color:rgb(252, 252, 252); font-weight:400; text-transform:uppercase; z-index:10; opacity:.8;    }
 
-  nav ul{
-    background-color: var(--green-light);
-
-  }
+ 
 
 }
 
@@ -662,7 +659,7 @@ body.hero-anime #switch{
 	margin: 0;
 	font-size: 13px;
 	letter-spacing: 1px;
-	color: #212121;
+	color: #161616;
 	background-color: #fcfaff;
 	border: none;
 	border-radius: 3px;
@@ -675,13 +672,13 @@ body.hero-anime #switch{
 
 .dropdown-item {
 	padding: 3px 15px;
-	color: #ece5e5;
+	color: #161515;
 	border-radius: 2px;
     transition: all 200ms linear;
 }
 .dropdown-item:hover,
 .dropdown-item:focus {
-	color: #fff;
+	color: rgb(20, 20, 20);
 	background-color: var(--my-tomato);
 }
 

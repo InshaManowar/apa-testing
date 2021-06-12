@@ -947,14 +947,14 @@ body.hero-anime #switch{
 
 .dropdown-item {
 	padding: 3px 15px;
-	color: #f8f7f7;
+	color: #1d1c1c;
 	border-radius: 2px;
     transition: all 200ms linear;
 }
 .dropdown-item:hover,
 .dropdown-item:focus {
 	color: #fff;
-	background-color: var(--my-tomato);
+	background-color: var(--my-tomato) !important;
 }
 
 

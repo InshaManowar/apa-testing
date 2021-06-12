@@ -11,7 +11,7 @@
 
 
 <div id="sc-edprofile"style="margin-top: 10%;">
-  <h1 class="lead">Make changes to your profile</h1>
+  <h1 class="lead" style="font-family: Oswald;">Make changes to your profile</h1>
   <form class="sc-container" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     <label for="inputUsername">Username</label>
@@ -52,7 +52,7 @@
   <p style="color:green; text-align: center;">{{success_message}}</p>
 {% endif  %}
 
-<button class="btn btn-lg btn-primary btn-block" type="submit"> Save changes </button>
+<button class="apa-btn-design btn-block text-center" type="submit"> Save changes </button>
 
   </form>
 

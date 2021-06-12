@@ -3,16 +3,17 @@
 
 <link rel="stylesheet" type="text/css" href="{% static 'accounts/login_form_design1.css' %}">
 <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 {% endblock %}
 {% block content %}
 
   {% load static %}
-  <p>Take me back to <a href="{% url 'home:home' %}">home page</a></p>
+  <p style="font-family: Josefin Sans;">Take me back to <a href="{% url 'home:home' %}">home page</a></p>
 
-  <div class="wrapper">
-    <h1 class="title">
+  <div class="wrapper" style="font-family: Josefin Sans;">
+    <h1 class="title" style="font-family: Oswald;">
 Login</h1>
 <form class="form-signin" method="POST">{% csrf_token %}
   <div class="field">

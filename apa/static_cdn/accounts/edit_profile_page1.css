@@ -10,6 +10,9 @@
 body{
   background-color: #cfd0d1!important;
 }
+label{
+  font-family: Josefin Sans !important;
+}
 /* css class for the edit profile generated errors */
 .profilepress-edit-profile-status {
   margin-top: 15%;
@@ -28,7 +31,7 @@ body{
 }
 @media only screen and (max-width: 768px) {
   #sc-edprofile h1{
-    margin-top: 35%;
+    margin-top: 47%;
   }
   #sc-edprofile{
     width: 98% !important;
@@ -50,7 +53,6 @@ body{
   line-height: 1.4;
   padding: 8px 5px;
   margin: auto;
-
   box-shadow: -3px -3px 7px #27272773,
               3px 3px 5px rgba(94,104,121,0.288);
 }
@@ -102,7 +104,7 @@ div#sc-edprofile input[type="password"], div#sc-edprofile select, div#sc-edprofi
   margin-bottom: 4%;
   border: 1px solid #ccc;
   padding: 1%;
-  font-family: 'Open Sans', sans-serif;
+  font-family: Josefin Sans;
   font-size: 95%;
   color: #555;
   box-shadow: -3px -3px 7px #ffffff73,
@@ -141,4 +143,29 @@ div#sc-edprofile input[type="submit"]:hover {
   background: #054363;
   transform: scale(1.1);
 
+}
+
+.apa-btn-design{
+  background-color: white;
+  border: 2px solid var(--my-tomato);
+  border-radius: 45px;
+  width: 200px;
+  font-family: Oswald;
+}
+
+.apa-btn-design a{
+  text-decoration: none;
+  color: #35373a;
+  font-weight: 400;
+}
+.apa-btn-design a:hover{
+  color: black;
+}
+.apa-btn-design a:focus{
+  color: black;
+}
+
+.apa-btn-design:hover{
+  background-color: #f8f9d2;
+  background-image: linear-gradient(315deg, #f8f9d2 0%, #e8dbfc 74%); 
 }

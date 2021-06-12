@@ -1485,13 +1485,13 @@ body.hero-anime #switch{
 
 .dropdown-item {
 	padding: 3px 15px;
-	color: #faf4f4;
+	color: #080808;
 	border-radius: 2px;
     transition: all 200ms linear;
 }
 .dropdown-item:hover,
 .dropdown-item:focus {
-	color: #fff;
+	color: rgb(29, 28, 28);
 	background-color: var(--my-tomato);
 }
 

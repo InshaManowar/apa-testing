@@ -1,13 +1,26 @@
 {% extends 'accounts/base.html' %}
 {% load static %}
 {% block head %}
-  
+   <style>
+       @media (max-width: 768px){
+           h1{
+               margin-top: 35% !important;
+               margin-bottom: 10%;
+              
+           }
+       }
+       .extra-div{
+           margin-top: 15%;
+       }
+   </style>
 {% endblock %}
 
 
 {% block content %}
+<div class="extra-div">
 
-<div class="container logout-wrap text-center" style="margin-top: 15%; margin-bottom: 20%;" >
+</div>
+<div  class="container logout-wrap text-center" style="font-family: Josefin Sans; margin-bottom: 12%;" >
     <h1 style="color: black !important;">You have logged out of your account</h1>
 
     <a href="{% url 'login' %}"> Login Again </a>
