@@ -646,6 +646,7 @@ Footer
   color: var(--grey);
   font-size: 1rem;
 
+
 }
 
 .footer-top__box h3 {
@@ -1473,7 +1474,7 @@ body.hero-anime #switch{
 	font-size: 13px;
 	letter-spacing: 1px;
 	color: #212121;
-	background-color: #fcfaff;
+	background-color: #fcfaff !important;
 	border: none;
 	border-radius: 3px;
 	box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15);
@@ -1485,13 +1486,13 @@ body.hero-anime #switch{
 
 .dropdown-item {
 	padding: 3px 15px;
-	color: #080808;
+	color: #ee7b7b;
 	border-radius: 2px;
     transition: all 200ms linear;
 }
 .dropdown-item:hover,
 .dropdown-item:focus {
-	color: rgb(29, 28, 28);
+	color: #fff;
 	background-color: var(--my-tomato);
 }
 
