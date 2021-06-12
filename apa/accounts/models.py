@@ -57,8 +57,6 @@ class Account(AbstractBaseUser):
     is_superuser= models.BooleanField(default=False)
     profile_image=models.ImageField(upload_to=upload_location, blank=True, null=True)
     
-    
-    
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']
     

@@ -81,7 +81,7 @@ def home_screen_view(request):
 
 def gallery_view(request):
     photos = GalleryImage.objects.all()
-    paginator = Paginator(photos, 2)
+    paginator = Paginator(photos, 4)
     page = request.GET.get('page')
     try:
         image_list = paginator.page(page)

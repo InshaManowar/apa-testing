@@ -7,7 +7,7 @@ from .models import Event, EventImage, EventTable
 # Create your views here.
 
 class EventList(generic.ListView):
-    paginate_by = '9'
+    paginate_by = '6'
     queryset = Event.objects.filter(status=1).order_by('startdate')
     template_name = 'events/index.html'
 

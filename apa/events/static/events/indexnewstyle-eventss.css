@@ -525,8 +525,11 @@ h1 {
 .nav-item:hover .nav-link{
 	color: var(--my-tomato)!important;
 }
-.nav-item.active .nav-link{
+.nav-item:active {
 	color: #777 !important;
+}
+.nav-item:focus{
+  color: #777 !important;
 }
 .nav-link {
 	position: relative;
