@@ -60,59 +60,10 @@ html {
       padding: 3%;
     }
   }
-  .cover {
-    width: 100%;
-    height: 55vmin;
-    background-position: -24rem -19rem;
-    background-size: 150%;
-    position: relative;
-  }
+
   .green-text{
     color: var(--my-tomato);
   }
-
-  .cover .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 999;
-  }
-
-  .cover .content {
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    padding-top: 19vmin;
-  }
-
-  .cover .content > h1 {
-    font-family: var(--Patua);
-    font-size: 6vmin;
-    color: whitesmoke;
-  }
-
-  .cover .content > p {
-    font-family: var(--Rubik);
-    font-size: 2vmin;
-    color: #e5e5e5;
-  }
-
-  .numbers .rect {
-    position: relative;
-    z-index: 1;
-    background: white;
-    width: 17rem;
-    height: 12rem;
-    padding-top: 3.5vmin;
-    margin: 1rem;
-    border-radius: 0.5em;
-    box-shadow: 0px 20px 20px -17px rgba(255, 159, 16, 0.53);
-}
-
-
-
 
 
 /*SECTION CODE ENDS HERE*/
@@ -196,7 +147,7 @@ html {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  font-family: Josefin Sans !important;
+  font-family: Berkshire Swash !important;
 }
 .header-two {
   position: relative;
@@ -1222,7 +1173,7 @@ form.example::after {
 
 .bg {
   animation:slide 20s ease-in-out infinite alternate;
-  background-image: linear-gradient(-60deg, #aff1da 50%, #f9ea8f 50%);
+  background-image: linear-gradient(-60deg, #84c8ff 50%, #09203f 50%);
   bottom:0;
   left:-50%;
   opacity:.5;
