@@ -18,7 +18,7 @@ app_name = 'apa'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
-    path('members/', include('member.urls')),
+    path('membership/', include('member.urls')),
     path('events/', include('events.urls')),
  #   path('subscribe/', include('subscribe.urls')),
   #  path('register/', registration_view, name = "register"),

@@ -12,6 +12,22 @@
     select{
         width: 30% !important;
     }
+    @media (max-width: 767px){
+      input, textarea{
+
+width: 100% !important;
+
+}
+select{
+width: 70% !important;
+}
+    }
+button{
+  margin-bottom: 3%;
+}
+  .form{
+    margin-top: 35% !important;
+  }
 </style>
 {% endblock %}
 
@@ -21,7 +37,7 @@
 <body>
  
     <div class="container">
-        <div style="height: 100px; margin-top: 10%;">
+        <div class="form" style="height: 100px; margin-top: 10%;">
             <h1 style="font-family: Oswald; font-size: 250%; color: black; margin-bottom: 3%;">APA Membership form</h1>
             <p class="text-center" style="font-family: Josefin Sans; margin-bottom: 5%; font-style: oblique;">
                 Please fill all details with accuracy and authenticity. 
