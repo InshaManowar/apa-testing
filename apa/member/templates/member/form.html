@@ -1,0 +1,79 @@
+{% extends 'accounts/base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block head %}
+<style>
+    input, textarea{
+
+        width: 50% !important;
+
+    }
+    select{
+        width: 30% !important;
+    }
+</style>
+{% endblock %}
+
+
+{% block content %}
+
+<body>
+ 
+    <div class="container">
+        <div style="height: 100px; margin-top: 10%;">
+            <h1 style="font-family: Oswald; font-size: 250%; color: black; margin-bottom: 3%;">APA Membership form</h1>
+            <p class="text-center" style="font-family: Josefin Sans; margin-bottom: 5%; font-style: oblique;">
+                Please fill all details with accuracy and authenticity. 
+
+            </p>    
+        </div>    
+<form style="font-family: Josefin sans; margin-top: 10%;" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+    {% for hidden_field in membership_form.hidden_fields %}
+    {{ hidden_field }}
+  {% endfor %}
+
+  {% if form.non_field_errors %}
+    <div class="alert alert-danger" role="alert">
+      {% for error in membership_form.non_field_errors %}
+        {{ error }}
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  {% for field in membership_form.visible_fields %}
+    <div class="form-group">
+      {{ field.label_tag }}
+
+      {% if membership_form.is_bound %}
+        {% if field.errors %}
+          {% render_field field class="form-control is-invalid" %}
+          {% for error in field.errors %}
+            <div class="invalid-feedback">
+              {{ error }}
+            </div>
+          {% endfor %}
+        {% else %}
+          {% render_field field class="form-control is-valid" %}
+        {% endif %}
+      {% else %}
+        {% render_field field class="form-control" %}
+      {% endif %}
+
+      {% if field.help_text %}
+        <small class="form-text text-muted">{{ field.help_text }}</small>
+      {% endif %}
+    </div>
+  {% endfor %}
+  <p class="text-danger" style="font-family: Josefin Sans; margin-bottom: 5%; font-style: oblique;">
+    Please review your form before clicking on submit. Changes after submission is not possible
+</p>  
+    <button type="submit" class="btn btn-primary">Submit</button>
+  
+</form>
+    </div>
+  
+</body>
+{% endblock %}
+</html>

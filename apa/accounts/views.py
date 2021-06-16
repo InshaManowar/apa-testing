@@ -1,18 +1,10 @@
-from django.shortcuts import render, redirect,get_object_or_404
+from django.shortcuts import render, redirect
 from django.db.models import Q
 from django.contrib.auth import login, logout, authenticate
 from accounts.forms import RegistrationForm, AccountAuthenticationForm, AccountUpdateForm
-from django.views.generic import ListView
 from django.contrib.auth.decorators import login_required
-from django.utils.decorators import method_decorator
 from .models import Account
 from django.views import generic
-from django.core import files  
-from django.core.mail import EmailMessage
-from django.conf import settings 
-from django.template.loader import render_to_string
-from apa import settings
-
 
 
 def registration_view(request):

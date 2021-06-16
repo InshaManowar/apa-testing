@@ -96,61 +96,59 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ml-auto py-4 py-md-0">
-                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
-                                  <a class="nav-link" href="{% url 'home:home' %}">HOME</a>
-                </li>
-                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                  <a class="nav-link" href="{% url 'home:contactus' %}">CONTACT</a>
-                </li>
-                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                  <a class="nav-link" href="{% url 'event:events' %}">EVENTS</a>
-                </li>
-                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                  <a class="nav-link" href="{% url 'account_list' %}">MEMBERS</a>
-                </li>
-               
-            {% if request.user.is_authenticated %}
+							<ul class="navbar-nav ml-auto py-4 py-md-0">
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+								  <a class="nav-link" href="{% url 'home:home' %}">HOME</a>
+								</li>
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href="{% url 'event:events' %}">EVENTS</a>
+								  </li>
+							
+				<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+				  <a class="nav-link" href="{% url 'account_list' %}">MEMBERS</a>
+				</li>
+		
+		
+			{% if request.user.is_authenticated %}
+      <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+        <a class="nav-link" href="{% url 'home:resource' %}">RESOURCES</a>
+      </li>
+  
+			<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+			  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">YOUR PROFILE </a>
+			  <div class="dropdown-menu">
+				<a class="dropdown-item" href="{% url 'account_update' %}">Update Profile</a>
+				<a class="dropdown-item" href="{% url 'password_change' %}">Change Password</a>
+				<hr>
+				<a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+			  </div>
+			</li>
+						  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+			  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">ABOUT US</a>
+			  <div class="dropdown-menu">
+				<a class="dropdown-item" href="{% url 'home:video' %}">Videos</a>
+				<a class="dropdown-item" href="{% url 'home:visions' %}">Our Visions</a>
+				<a class="dropdown-item" href="{% url 'home:gallery' %}">Gallery</a>
+			  </div>
+			</li>
 
-            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">YOUR PROFILE </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="{% url 'account_update' %}">Update Profile</a>
-                <a class="dropdown-item" href="{% url 'password_change' %}">Change Password</a>
-                <hr>
-                <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
-              </div>
-            </li>
-                          <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">PAGES</a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="{% url 'home:resource' %}">Resources</a>
-                <a class="dropdown-item" href="{% url 'home:video' %}">Videos</a>
-                <a class="dropdown-item" href="{% url 'home:visions' %}">Our Visions</a>
-                <a class="dropdown-item" href="{% url 'home:gallery' %}">Gallery</a>
-                <a class="dropdown-item" href="{% url 'home:aboutus' %}">About us</a>
-              </div>
-            </li>
+			{% else %}
 
-            {% else %}
-
-    
-           
-        
-                          <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">PAGES</a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="{% url 'home:visions' %}">Our Visions</a>
-                <a class="dropdown-item" href="{% url 'home:aboutus' %}">About us</a>
-              </div>
-            </li>
-            <li class="nav-item  pl-4 pl-md-0 ml-0 ml-md-4">
-              <a class="nav-link" href="{% url 'login' %}">LOGIN</a>
-            </li>
-            {% endif %}
-
+	
+		   
+		
+						  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+			  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">ABOUT US</a>
+			  <div class="dropdown-menu">
+				<a class="dropdown-item" href="{% url 'home:visions' %}">Our Visions</a>
+				<a class="dropdown-item" href="{% url 'home:aboutus' %}">About us</a>
+			  </div>
+			</li>
+			<li class="nav-item  pl-4 pl-md-0 ml-0 ml-md-4">
+			  <a class="nav-link" href="{% url 'login' %}">LOGIN</a>
+			</li>
+			{% endif %}
               
               </ul>
             </div>

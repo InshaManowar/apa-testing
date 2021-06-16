@@ -4,11 +4,8 @@ from django.urls import path, include
 from apa import views
 from .import views
 from django.conf.urls.static import static
-from django.conf import settings
 from .forms import ContactForm
 from django.core.mail import send_mail, BadHeaderError
-from events.models import Event
-from django.template.loader import render_to_string
 
 from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
