@@ -207,7 +207,10 @@ font-family: Josefin Sans !important;
     background-color: var(--green-light);
     height: 80vh !important;
 }
-
+.apa-btn{
+border-radius: 45px;
+padding: 1% !important;
+}
 .team-boxed {
   margin-top: 10%;
   color:#313437;

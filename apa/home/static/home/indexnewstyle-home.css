@@ -544,7 +544,11 @@ accordian menu code
     margin-bottom: 3%;
   }
  
-
+}
+.apa-btn-design:hover{
+  background-color: #f8f9d2;
+  background-image: linear-gradient(315deg, #f8f9d2 0%, #e8dbfc 74%); 
+}
 /*
 ======================
 accordian code ends here
@@ -996,7 +1000,7 @@ h1 {
 }
 .timeline--entry__title {
   color: rgb(241, 231, 231);
-  background-color: rgb(70, 70, 70);
+  background-color: var(--my-orange);
   font-weight: 300;
   font-family: Oswald !important ;
   font-size: 1.7rem;
@@ -1014,7 +1018,7 @@ h1 {
   border-right: 10px solid black;
 }
 .timeline--entry__detail {
-  background-color: rgb(241, 236, 236);
+  background-color: mistyrose;
   padding: 1em;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;  margin: 0;
   font-family: Josefin Sans !important;
@@ -1166,11 +1170,7 @@ form.example::after {
   color: black;
 }
 
-}
-.apa-btn-design:hover{
-  background-color: #f8f9d2;
-  background-image: linear-gradient(315deg, #f8f9d2 0%, #e8dbfc 74%); 
-}
+
 .bg {
   animation:slide 20s ease-in-out infinite alternate;
   background-image: linear-gradient(-60deg, #84c8ff 50%, #09203f 50%);
