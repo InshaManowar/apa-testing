@@ -999,8 +999,8 @@ h1 {
   background-color: #eeeeee;
 }
 .timeline--entry__title {
-  color: rgb(241, 231, 231);
-  background-color: var(--my-orange);
+  color: rgb(247, 247, 247);
+  background-color: rgb(83, 83, 83);
   font-weight: 300;
   font-family: Oswald !important ;
   font-size: 1.7rem;
@@ -1018,7 +1018,7 @@ h1 {
   border-right: 10px solid black;
 }
 .timeline--entry__detail {
-  background-color: mistyrose;
+  background-color: rgb(255, 255, 255);
   padding: 1em;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;  margin: 0;
   font-family: Josefin Sans !important;
