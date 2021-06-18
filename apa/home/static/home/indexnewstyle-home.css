@@ -91,11 +91,14 @@ html {
   }
 
   .onoffswitch3-inner > span {
-      display: block; float: left; position: relative; width: 50%; height: 30px; padding: 0; line-height: 30px;
-      font-size: 14px; color: white; font-family: 'Montserrat', sans-serif; font-weight: bold;
+      display: block; float: left; position: relative; width: 50%; height: 50px; padding: 0; line-height: 30px;
+      font-size: 15px; color: white; font-family: 'Montserrat', sans-serif; font-weight: bold;
       -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
   }
-
+.onoffswitch3-active > marquee{
+  font-size: 24px !important;
+  padding-top: 0.5%;
+}
   .onoffswitch3-inner .onoffswitch3-active {
       padding-left: 10px;
       background-color: #252525; color: #FFFFFF;
