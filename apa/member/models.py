@@ -25,11 +25,14 @@ class Member(models.Model):
     email=models.CharField(max_length=250, default=None, null=False, blank=False )
     
     address_1 = models.CharField(default='none', max_length=128)
-    address_2 = models.CharField(default=None, max_length=128, blank=True)
-
     city = models.CharField(default=None, max_length=64)
     state = models.CharField(max_length=250, default=None, null=False, blank=False)
     zip_code = models.CharField(default=None, max_length=10)
+    
+    address_2 = models.CharField(default=None, max_length=128, blank=True)
+    city2 = models.CharField(default=None, max_length=64)
+    state2 = models.CharField(max_length=250, default=None, null=False, blank=False)
+    zip_code2 = models.CharField(default=None, max_length=10)
     
     college=models.CharField(default=None, null=True, blank=True, max_length=500)
     degree=models.CharField(max_length=500, default=None)
@@ -51,11 +54,8 @@ class Member(models.Model):
     research_work=models.TextField(default=None, null=True, blank=True)
     
     
-    experience_certificate=models.FileField(default=None, upload_to=upload_location)
+    profile_photo=models.FileField(default=None, upload_to=upload_location)
     registration_certificate=models.FileField(default=None, upload_to=upload_location)
     degree_certificate=models.FileField(default=None, upload_to=upload_location)
     postgraduate_certificate=models.FileField(default=None, upload_to=upload_location)
     remarks=models.TextField(default=None, null=True, blank=True)
-
-
-

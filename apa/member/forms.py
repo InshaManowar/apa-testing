@@ -1,3 +1,4 @@
+  
 from django import forms
 from django.db import models
 from django.db.models import fields
@@ -21,14 +22,15 @@ class MembershipForm(forms.ModelForm):
             'council_reg_date':('Council registration date'),
             'special_training':('Any special training'),
             'mobile2':('Your mobile number 2'),
-            'degree':('Your college degree name, e.g BAMS'),
+            'degree':('Your college degree name, e.g BAMS, MS, MD'),
             'experience_name':('Years of experience'),
             'private_practice':('About your private practice'),
             'teacher':('About your teaching experience'),
             'reference':('Any references'),
             'Research_work':('About your research work'),
-            'address_1':('address line 1 (Resident address)'),
-            'address_2':('address line 2 (Resident address)'),
+            'address_1':('Resident Address'),
+            'address_2':('Clinic Address'),
+            'city2':('City your clinic is located in'),
+            'state2':('State your clinic is located in'),
+            'zip_code2':('Zip code')
         }
-        
-    
