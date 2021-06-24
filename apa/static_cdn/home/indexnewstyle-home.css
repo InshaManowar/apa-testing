@@ -1288,7 +1288,8 @@ form.example::after {
 .nav-link{
 	color: #fdfdfd !important;
 	font-weight: 500;
-    transition: all 200ms linear;
+  font-family: Source Sans Pro !important;
+  transition: all 200ms linear;
 }
 .nav-item:hover .nav-link{
 	color: var(--my-tomato)!important;
@@ -1440,7 +1441,7 @@ body.hero-anime #switch{
 
 .dropdown-item {
 	padding: 3px 15px;
-	color: #ee7b7b;
+	color: #020202 !important;
 	border-radius: 2px;
     transition: all 200ms linear;
 }

@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = ')--3vd0e483xwc6iako#1gjjo99)p72ez791_u2ynqj1w7r_9@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -159,12 +159,11 @@ EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False 
 EMAIL_HOST = 'smtp.gmail.com' 
 EMAIL_PORT = 587  
-EMAIL_HOST_USER = 'isterecruitments2020@gmail.com' 
-EMAIL_HOST_PASSWORD = 'ohrdkoowygjivjse' 
+EMAIL_HOST_USER = 'ayurvedproctologyassociation@gmail.com' 
+EMAIL_HOST_PASSWORD = 'zvvovpdmktatrzhq' 
 
 LOGIN_URL = 'login/'
 LOGIN_REDIRECT_URL = 'login/'
 
 AUTH_USER_MODEL = 'accounts.Account'
 #PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'apa\home\static\home\js', 'serviceworker.js')
-

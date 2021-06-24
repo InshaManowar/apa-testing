@@ -520,7 +520,8 @@ h1 {
 .nav-link{
 	color: #fdfdfd !important;
 	font-weight: 500;
-    transition: all 200ms linear;
+  font-family: Source Sans Pro !important;
+  transition: all 200ms linear;
 }
 .nav-item:hover .nav-link{
 	color: var(--my-tomato)!important;
@@ -658,7 +659,7 @@ body.hero-anime #switch{
     transform: translate3d(0, 0px, 0);
 }
 .dropdown-menu {
-	padding: 10px!important;
+	padding: 12px!important;
 	margin: 0;
 	font-size: 13px;
 	letter-spacing: 1px;

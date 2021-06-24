@@ -744,6 +744,7 @@ form.example::after {
 }
 .navbar{
 	padding: 0;
+
 }
 .navbar-brand img{
 	height: 30px;
@@ -796,7 +797,8 @@ form.example::after {
 .nav-link{
 	color: #fdfdfd !important;
 	font-weight: 500;
-    transition: all 200ms linear;
+  font-family: Source Sans Pro !important;
+  transition: all 200ms linear;
 }
 .nav-item:hover .nav-link{
 	color: var(--my-tomato)!important;
