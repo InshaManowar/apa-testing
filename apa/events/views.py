@@ -8,7 +8,7 @@ from .models import Event, EventImage, EventTable
 
 class EventList(generic.ListView):
     paginate_by = '6'
-    queryset = Event.objects.filter(status=1).order_by('startdate')
+    queryset = Event.objects.filter(status=1).order_by('-startdate')
     template_name = 'events/index.html'
 
 class EventDetails(generic.DetailView):

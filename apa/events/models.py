@@ -32,6 +32,9 @@ class Event(models.Model):
     def __str__(self):
         return self.title
     
+    class Meta:
+        ordering = ['-startdate',]
+    
 class EventImage(models.Model):
     event = models.ForeignKey(Event, default=None, on_delete=models.CASCADE)
     images = models.FileField(upload_to = upload_location, blank=True, default=None)
