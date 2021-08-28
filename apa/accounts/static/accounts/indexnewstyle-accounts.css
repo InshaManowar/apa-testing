@@ -167,41 +167,8 @@ font-family: Josefin Sans !important;
   }
 
 }
-.counter-section{
-    margin-top: 4%;
-    margin-bottom: 5%;
-    color: rgb(17, 16, 16);
 
-  }
-  .icon-box{
-    border: 2px solid var(--green-light);
-    height: 90px;
-    width: 90px;
-    margin:20px auto;
-    transform: rotate(45deg);
-  }
-  .icon-box .fa{
-    font-size: 40px;
-    margin: 25px auto;
-    color: #ffffff;
-    transform: rotate(-45deg);
-  }
-  .counter-box p{
-    font-size: 40px;
-    color: #b6b8b4;
-  }
 
-  .parallax-section{
-  margin-bottom: 7%;
-  margin-top: 5%;
-  padding: 6%;
-  color: #d1cecd;
-  background-image: url('pic11.jpeg');
-  background-repeat: no-repeat;
-  background-position: cover;
-  background-attachment: fixed;
-
-}
 .about-heading{
     margin-bottom: 10%;
     background-color: var(--green-light);

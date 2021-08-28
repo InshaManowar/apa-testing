@@ -25,7 +25,7 @@ class Event(models.Model):
     startdate = models.DateTimeField()
     enddate = models.DateTimeField(default='')
     status = models.IntegerField(choices = STATUS, default=0)
-
+    link = models.TextField(default=None)
     class Meta:
         ordering = ['startdate']
 
@@ -65,5 +65,4 @@ class EventNew(models.Model):
 def pre_save_blog_post_receiver(sender, instance, *args, **kwargs):
 	if not instance.slug:
 		instance.slug = slugify(instance.title)
-
 pre_save.connect(pre_save_blog_post_receiver, sender=Event)
