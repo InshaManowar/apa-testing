@@ -131,6 +131,6 @@ class AccountList(generic.ListView):
                 Q(designation__icontains=a)               
             )
         else:
-            account_list = Account.objects.filter(is_active=True)
+            account_list = Account.objects.filter(is_active=True).order_by('-first_name')[2:]
         return account_list
 
