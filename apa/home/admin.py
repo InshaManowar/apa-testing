@@ -5,7 +5,7 @@ from django.utils.safestring import mark_safe
 import threading
 from django.conf import settings
 from django.http import HttpResponse
-from .models import GalleryImage, Gallery, Video, VideoDisplay, VideoSidebar, UpcomingEvents, ResourcesBooks, ResourcesLinks, ResourcesCategory
+from .models import GalleryImage, Gallery, Video, VideoDisplay,  UpcomingEvents, ResourcesBooks, ResourcesLinks, ResourcesCategory
 
 #gallery
 
@@ -29,11 +29,9 @@ admin.site.register (Gallery, GalleryAdmin)
 class VideoDisplayAdmin(admin.StackedInline):
     model = VideoDisplay
     
-class VideoSidebarAdmin(admin.StackedInline):
-    model = VideoSidebar
  
 class VideoAdmin(admin.ModelAdmin):
-    inlines = [VideoDisplayAdmin, VideoSidebarAdmin]
+    inlines = [VideoDisplayAdmin]
     list_display=('title','created_time',)
  
 @admin.register(VideoDisplay)

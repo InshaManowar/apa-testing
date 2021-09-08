@@ -35,14 +35,9 @@ class Video(models.Model):
    
 class VideoDisplay(models.Model):
     videos = models.ForeignKey(Video, default=None, on_delete=models.CASCADE)
-    display = models.TextField( default = None, blank=True)
+    display = models.CharField( default = None, blank=True, max_length=255)
  
-    
-class VideoSidebar(models.Model):
-    videos = models.ForeignKey(Video, default=None, on_delete=models.CASCADE)
-    display_sidebar = models.TextField( default = None, blank=True)
-    
-    
+
 class UpcomingEvents(models.Model):
     event_name = models.CharField(default=None, blank=False, max_length=150)
     event_info= models.TextField(default=None, blank=False)

@@ -11,7 +11,7 @@ from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.contrib.auth.decorators import login_required
 
-from .models import Gallery, GalleryImage, VideoDisplay, Video, VideoSidebar, UpcomingEvents, ResourcesBooks, ResourcesCategory, ResourcesLinks
+from .models import Gallery, GalleryImage, VideoDisplay, Video, UpcomingEvents, ResourcesBooks, ResourcesCategory, ResourcesLinks
 # Create your views here.
 
 
@@ -98,7 +98,7 @@ def gallery_view(request):
     
 def video_view(request):
     video = VideoDisplay.objects.all()
-    video_side = VideoSidebar.objects.all()
+    video_side = VideoDisplay.objects.all()[0:5]
     return render(request, 'home/video.html',{ 'video': video, 'video_side' : video_side })
 
 @login_required
