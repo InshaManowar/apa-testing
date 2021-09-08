@@ -98,7 +98,7 @@ def gallery_view(request):
     
 def video_view(request):
     video = VideoDisplay.objects.all()
-    video_side = VideoDisplay.objects.all()[0:5]
+    video_side = VideoDisplay.objects.all()[0:4]
     return render(request, 'home/video.html',{ 'video': video, 'video_side' : video_side })
 
 @login_required

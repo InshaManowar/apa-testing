@@ -36,7 +36,7 @@ class Video(models.Model):
 class VideoDisplay(models.Model):
     videos = models.ForeignKey(Video, default=None, on_delete=models.CASCADE)
     display = models.CharField( default = None, blank=True, max_length=255)
- 
+    subtitle = models.CharField( default = None, blank=True, max_length=255)
 
 class UpcomingEvents(models.Model):
     event_name = models.CharField(default=None, blank=False, max_length=150)
