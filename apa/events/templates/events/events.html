@@ -27,11 +27,15 @@
 
   <div class="row">
    <div class="col-lg-5">
-    <h3 style="  font-family: Josefin Sans !important;
+    <h3 style="  font-family: Oswald !important;
     " >{{ event.subtitle }}</h3>
+
+
+<div style="font-size: 110%; font-family: Oswald;">{{ event.startdate}}, {{ event.location }}</div>
+<br>
     <p style="padding: 1%; line-height:160%;"> {{ event.content}} </p>
-<button class="btn btn-success">    <a style=" color: white; margin-bottom: 5%; font-size: 120%;" href="{{ event.link }}">Click here to register</a>
-</button>   </div>
+<button class="btn btn-success">    <a style=" color: white; margin-bottom: 5% !important; font-size: 120%;" href="{{ event.link }}">Click here to register</a>
+</button>   </div> <br>
   <div class="col-lg-7">
  
 
