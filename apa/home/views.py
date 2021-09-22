@@ -74,7 +74,7 @@ def home_screen_view(request):
     return render(request, "home/aboutus.html", context)
 
  
-@login_required
+@login_required (login_url='accounts/login.html')
 
 def gallery_view(request):
     photos = GalleryImage.objects.all()
@@ -94,23 +94,30 @@ def gallery_view(request):
         
     })
     
-@login_required
-    
+@login_required (login_url='accounts/login.html')
 def video_view(request):
     t = Video.objects.all()
     video = VideoDisplay.objects.all()
     video_side = VideoDisplay.objects.all()[0:4]
     return render(request, 'home/video.html',{ 't':t,'video': video, 'video_side' : video_side })
 
-@login_required
+@login_required (login_url='accounts/login.html')
 def resource_view(request):
     resource = ResourcesBooks.objects.all()
     return render(request, 'home/resource.html' , {'resource':resource} )
 
-@login_required
+@login_required (login_url='/accounts/login.html')
 def resource_links_view(request):
     link = ResourcesLinks.objects.all()
     return render(request, 'home/resource.html', {'link':link})
     
     
+    
+def error_404(request, exception):
+        data = {}
+        return render(request,'home/404.html', data)
+
+def error_500(request, *args):
+        data = {}
+        return render(request,'home/500.html', data)
     
