@@ -24,8 +24,7 @@ SECRET_KEY = ')--3vd0e483xwc6iako#1gjjo99)p72ez791_u2ynqj1w7r_9@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS =  ['localhost', '127.0.0.1']
 
 if DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backend.console.EmailBackend' #during development env
@@ -70,11 +69,12 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'apa.urls'
+TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATE_DIR,],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

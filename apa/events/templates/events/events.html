@@ -11,6 +11,26 @@
 
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 7px;  }
+
+    .speaker-image{
+      border-radius: 50%;
+      height: 180px;
+      width: 180px;
+    }
+    .card-container{
+      margin-left: 10%; margin-top: 5%; margin-bottom: 10%;
+    }
+    @media only screen and (max-width: 768px) {
+      .card-container{
+      margin-left: 0%; margin-top: 5% !important; margin-bottom: 10% !important;
+    }
+    .card-margin{
+      margin-top: 2%;
+    }
+    .register-btn{
+      margin: 3%;
+    }
+    }
 </style>
 {% endblock %}
 {% block content %}
@@ -41,8 +61,8 @@
 <div style="font-size: 110%; font-family: Oswald;">{{ event.startdate}}, {{ event.location }}</div>
 <br>
     <p style="padding: 1%; line-height:160%;"> {{ event.content}} </p>
-<button class="btn btn-success">    <a style=" color: white; margin-bottom: 5% !important; font-size: 120%;" href="{{ event.link }}">Click here to register</a>
-</button>    <div  style="background-color: rgb(179, 179, 245);" title="Add to Calendar" class="addeventatc btn">
+<button class="btn btn-success register-btn">    <a style=" color: white; margin-bottom: 5% !important; font-size: 120%; font-family: Oswald;" href="{{ event.link }}">Click here to register</a>
+</button>    <div   style="background-color: rgb(179, 179, 245); font-family: Oswald;" title="Add to Calendar" class="addeventatc btn register-btn">
   Add to Calendar
   <span class="start">{{ event.startdate }}</span>
   <span class="end">{{ event.enddate }}</span>
@@ -100,6 +120,38 @@
       
 </tbody>
 </table>
+</div>
+
+
+{% if speakers %}
+<h1 style="color: black; margin-top: 5%; font-family: Oswald; font-size: 380%;" > <span style="color: tomato;">Speakers</span> of our event</h1>
+
+  
+{% endif %}
+  
+
+<div class="container text-center card-container" >
+  <div class="row">
+
+  {% for s in speakers %}
+
+  <div class="col-lg-3 card-margin" >
+    <div class="card text-center" >
+      <div class="card-body">
+
+        <img class="card-img-top speaker-image" src="{{ s.photo.url }}" width="100px" alt="">
+        <br><br>
+        <h5 class="card-title" style="font-family: Oswald; color: gray; ">{{ s.name }}</h5>
+
+        <p class="card-text mute" style="font-family: Josefin Sans; color: cadetblue;">{{ s.details }}</p>
+        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+      </div>
+    </div>    </div>
+
+    
+  {% endfor %}
+    
+  </div>
 </div>
 
 {% endblock content %}

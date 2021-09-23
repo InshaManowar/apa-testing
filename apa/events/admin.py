@@ -1,9 +1,13 @@
 from django.contrib import admin
-from .models import Event, EventImage, EventTable, EventNew
+from .models import Event, EventImage, EventTable, EventNew, Speakers
 # Register your models here.
 class EventImageAdmin(admin.StackedInline):
     model = EventImage
     list_display = ('event')  
+    
+class SpeakersAdmin(admin.StackedInline):
+    model = Speakers
+    list_display = ('name')
 
 class EventTableAdmin(admin.StackedInline):
     model = EventTable
@@ -19,7 +23,7 @@ class EventAdmin(admin.ModelAdmin):
     list_filter = ("status",) 
     search_fields = ['title','content','startdate']  
     prepopulated_fields = {'slug': ('title',)}  
-    inlines = [EventImageAdmin,EventTableAdmin, EventNewAdmin]
+    inlines = [EventImageAdmin,EventTableAdmin, EventNewAdmin, SpeakersAdmin]
     
 @admin.register(EventImage)
 class EventImageAdmin(admin.ModelAdmin):
@@ -31,6 +35,9 @@ class EventTableAdmin(admin.ModelAdmin):
     pass
 @admin.register(EventNew)
 class EventNewAdmin(admin.ModelAdmin):
+    pass
+@admin.register(Speakers)
+class SpeakersAdmin(admin.ModelAdmin):
     pass
 
 

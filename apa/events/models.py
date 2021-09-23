@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models.fields.related import ForeignKey
 from django.db.models.signals import pre_save
 from django.utils.text import slugify
 from django.conf import settings
@@ -63,6 +64,12 @@ class EventNew(models.Model):
     class Meta:
         verbose_name='New Event'
         
+    
+class Speakers(models.Model):
+    event = models.ForeignKey(Event, default=None, on_delete=models.CASCADE)
+    name = models.CharField(max_length=255, default='')
+    photo = models.FileField(upload_to = upload_location, blank=True, default=None)
+    details = models.TextField(default='', blank=True, null=True)
     
     
 def pre_save_blog_post_receiver(sender, instance, *args, **kwargs):

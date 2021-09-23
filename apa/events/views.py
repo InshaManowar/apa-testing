@@ -1,7 +1,7 @@
 from django.shortcuts import render,get_object_or_404
 
 from django.views import generic
-from .models import Event, EventImage, EventTable
+from .models import Event, EventImage, EventTable, Speakers
 
 
 # Create your views here.
@@ -19,10 +19,11 @@ def detail_view(request, slug):
     event = get_object_or_404(Event, slug=slug)
     photos = EventImage.objects.filter(event=event)
     table = EventTable.objects.filter(event=event)
+    speakers = Speakers.objects.filter(event=event)
     return render(request, 'events/events.html', {
         'event':event,
         'photos':photos,
         'table':table,
+        'speakers':speakers,
         })
-    
     

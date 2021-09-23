@@ -1,6 +1,7 @@
 
 from django.contrib import admin
-
+from django.conf.urls import handler404, handler500
+import home
 admin.site.site_header = "Ayurveda Proctology Admin"
 admin.site.site_title = "Ayurveda Proctology Admin Portal"
 admin.site.index_title = "Ayurveda Proctology Portal"
@@ -46,3 +47,5 @@ if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
     
+handler404 = home.views.error_404
+handler500 = home.views.error_500

@@ -1,7 +1,6 @@
 from django.conf.urls import url
 from django.urls import path, include
 from home import views
-from django.conf.urls import handler404, handler500
 import home
 
 
