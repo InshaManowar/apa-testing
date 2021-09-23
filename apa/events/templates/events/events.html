@@ -19,7 +19,12 @@
     }
     .card-container{
       margin-left: 10%; margin-top: 5%; margin-bottom: 10%;
+    
     }
+    .card{
+      height: 100%;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        }
     @media only screen and (max-width: 768px) {
       .card-container{
       margin-left: 0%; margin-top: 5% !important; margin-bottom: 10% !important;
@@ -124,7 +129,7 @@
 
 
 {% if speakers %}
-<h1 style="color: black; margin-top: 5%; font-family: Oswald; font-size: 380%;" > <span style="color: tomato;">Speakers</span> of our event</h1>
+<h1 style="color: black; margin-top: 5%; font-family: Oswald; font-size: 380%;" > <span style="color: tomato;">Speakers and Moderators</span></h1>
 
   
 {% endif %}
@@ -140,9 +145,10 @@
       <div class="card-body">
 
         <img class="card-img-top speaker-image" src="{{ s.photo.url }}" width="100px" alt="">
-        <br><br>
+        <br><br> 
         <h5 class="card-title" style="font-family: Oswald; color: gray; ">{{ s.name }}</h5>
-
+        <p class='role' style="font-size: 12; font-style: italic; color: gray;">{{ s.role }}</p>
+<hr>
         <p class="card-text mute" style="font-family: Josefin Sans; color: cadetblue;">{{ s.details }}</p>
         <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
       </div>

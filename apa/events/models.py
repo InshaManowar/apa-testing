@@ -1,3 +1,4 @@
+from os import truncate
 from django.db import models
 from django.db.models.fields.related import ForeignKey
 from django.db.models.signals import pre_save
@@ -68,6 +69,7 @@ class EventNew(models.Model):
 class Speakers(models.Model):
     event = models.ForeignKey(Event, default=None, on_delete=models.CASCADE)
     name = models.CharField(max_length=255, default='')
+    role = models.CharField(max_length=255, blank=True, null=True)
     photo = models.FileField(upload_to = upload_location, blank=True, default=None)
     details = models.TextField(default='', blank=True, null=True)
     
