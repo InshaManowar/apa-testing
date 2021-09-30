@@ -3,6 +3,7 @@
   {% load static %}
 
 <head>
+<script data-ad-client="ca-pub-6265639656583098" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
  <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-X4L4E679J4"></script>
 <script>
@@ -109,24 +110,24 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
 							<ul class="navbar-nav ml-auto py-4 py-md-0">
 								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-								  <a class="nav-link" href="{% url 'home:home' %}">HOME</a>
+								  <a class="nav-link" href="{% url 'home:home' %}">Home</a>
 								</li>
 								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
-									<a class="nav-link" href="{% url 'event:events' %}">EVENTS</a>
+									<a class="nav-link" href="{% url 'event:events' %}">Events</a>
 								  </li>
 							
 				<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-				  <a class="nav-link" href="{% url 'account_list' %}">MEMBERS</a>
+				  <a class="nav-link" href="{% url 'account_list' %}">Members</a>
 				</li>
 		
 		
 			{% if request.user.is_authenticated %}
       <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-        <a class="nav-link" href="{% url 'home:resource' %}">RESOURCES</a>
+        <a class="nav-link" href="{% url 'home:resource' %}">Resources</a>
       </li>
   
       <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">ABOUT US</a>
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About us</a>
         <div class="dropdown-menu">
         <a class="dropdown-item" href="{% url 'home:video' %}">Videos</a>
         <a class="dropdown-item" href="{% url 'home:visions' %}">Our Visions</a>
@@ -134,7 +135,7 @@
         </div>
       </li>
       <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">HELLO, <span style="text-transform: uppercase;">{{ request.user.first_name }} {{ request.user.last_name }}</span> </a>
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Hello, <span style="text-transform: uppercase;">{{ request.user.first_name }} {{ request.user.last_name }}</span> </a>
         <div class="dropdown-menu">
         <a class="dropdown-item" href="{% url 'account_update' %}">Update Profile</a>
         <a class="dropdown-item" href="{% url 'password_change' %}">Change Password</a>
@@ -149,7 +150,7 @@
 		   
 		
 						  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-			  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">ABOUT US</a>
+			  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About us</a>
 			  <div class="dropdown-menu">
 				<a class="dropdown-item" href="{% url 'home:visions' %}">Our Visions</a>
 				<a class="dropdown-item" href="{% url 'home:aboutus' %}">About us</a>
@@ -159,7 +160,7 @@
 			  <a class="nav-link" href="{% url 'login' %}">Login</a>
 			</li>
       <li class="nav-item  pl-4 pl-md-0 ml-0 ml-md-4">
-				<a  href="{% url 'member:membership' %}">Get membership</a>
+				<a class="nav-link"  href="{% url 'member:membership' %}">Get membership</a>
 			</li>
 			{% endif %}
               
